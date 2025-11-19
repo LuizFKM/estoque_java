@@ -1,6 +1,8 @@
 /home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/Estoque.java
 /home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/dao/CategoriaDAO.java
+/home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/dao/ProdutoDAO.java
 /home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/database/Conexao.java
 /home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/model/Categoria.java
+/home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/model/Produto.java
 /home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/view/Login.java
 /home/luizfkm/NetBeansProjects/Estoque/src/main/java/com/mycompany/estoque/view/Principal.java

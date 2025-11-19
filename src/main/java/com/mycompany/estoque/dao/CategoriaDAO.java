@@ -47,4 +47,34 @@ public class CategoriaDAO {
         }
         return lista;
     }
+    
+    public void atualizar(int id, String categoria){
+        String sql = "UPDATE categoria SET nome = ? WHERE id = ?";
+        
+        try (Connection conn = Conexao.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setString(1, categoria);
+            ps.setInt(2, id);
+            
+            ps.executeUpdate();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void deletar(int id){
+        String sql = "DELETE from categoria WHERE id = ?";
+        
+        try (Connection conn = Conexao.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql)){
+
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            ps.executeUpdate();
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
 }
