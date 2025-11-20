@@ -4,6 +4,7 @@
 
 package com.mycompany.estoque;
 
+import com.mycompany.estoque.view.Login;
 import com.mycompany.estoque.view.Principal;
 
 /**
@@ -13,6 +14,6 @@ import com.mycompany.estoque.view.Principal;
 public class Estoque {
 
     public static void main(String[] args) {
-        new Principal().setVisible(true);
+        new Login().setVisible(true);
     }
 }
