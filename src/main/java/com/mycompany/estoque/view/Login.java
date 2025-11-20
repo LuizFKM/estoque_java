@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.estoque.view;
+import com.mycompany.estoque.model.Usuario;
+import com.mycompany.estoque.dao.UsuarioDAO;
+import javax.swing.JOptionPane;
+import com.mycompany.estoque.database.Conexao;
 
 /**
  *
@@ -11,10 +15,8 @@ package com.mycompany.estoque.view;
 public class Login extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
-
-    /**
-     * Creates new form Login
-     */
+    private UsuarioDAO uDAO = new UsuarioDAO();
+   
     public Login() {
         initComponents();
     }
@@ -85,7 +87,27 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogarActionPerformed
-        // TODO add your handling code here:
+        String email = txtEmail.getText();
+        String senha = String.valueOf(psfSenha.getPassword());
+     
+        Usuario usuarioLogado = uDAO.autenticar(email, senha);
+        if(email.isEmpty() || senha.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos");
+        }else if(usuarioLogado == null){
+            JOptionPane.showMessageDialog(this, "Email ou senha invalidos");
+        }else{
+            
+            if(usuarioLogado.getRole().equals("ADMIN")){
+                Conexao.definirCredenciais("admin", "admin123");
+            }else{
+                Conexao.definirCredenciais("colaborador", "colabora123");
+            }
+            
+            new Principal().setVisible(true);
+            this.dispose();
+        }
+        
+        
     }//GEN-LAST:event_btnLogarActionPerformed
 
     /**

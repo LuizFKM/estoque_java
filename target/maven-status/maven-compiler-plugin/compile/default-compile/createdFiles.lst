@@ -7,10 +7,12 @@ com/mycompany/estoque/view/Principal$5.class
 com/mycompany/estoque/view/Principal$6.class
 com/mycompany/estoque/dao/CategoriaDAO.class
 com/mycompany/estoque/view/Principal$2.class
+com/mycompany/estoque/model/Usuario.class
 com/mycompany/estoque/view/Principal$1.class
 com/mycompany/estoque/view/Principal$7.class
 com/mycompany/estoque/view/Principal$9.class
 com/mycompany/estoque/view/Principal$3.class
+com/mycompany/estoque/dao/UsuarioDAO.class
 com/mycompany/estoque/database/Conexao.class
 com/mycompany/estoque/dao/ProdutoDAO.class
 com/mycompany/estoque/view/Principal$8.class
